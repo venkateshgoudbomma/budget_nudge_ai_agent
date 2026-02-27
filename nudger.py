@@ -9,13 +9,13 @@ def generate_email(nudge):
        
     msg = EmailMessage()
     msg['Subject'] = 'BUDGET NUDGE NOTIFICATION'
-    msg['From'] = 'jakelegacy560@gmail.com'
-    msg['To'] = 'thunderhazk@gmail.com'
+    msg['From'] = 'agent email id'
+    msg['To'] = 'user email id'
     msg.set_content(nudge)
 
     # Send email using Gmail SMTP
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-        server.login('jakelegacy560@gmail.com', 'axbo bydt cyrs dsun')
+        server.login('agent email id', 'password')
         server.send_message(msg)
 
     print("Email sent successfully!")
@@ -57,4 +57,5 @@ def generate_nudge(food_spend, threshold, personality, projection):
 
     except Exception as e:
         return f"ERROR: {str(e)}"
+
 print("API KEY:", api_key)
